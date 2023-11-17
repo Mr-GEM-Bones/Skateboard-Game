@@ -1,3 +1,34 @@
-[gd_scene format=3 uid="uid://yme3lhdt8b68"]
+[gd_scene load_steps=5 format=3 uid="uid://yme3lhdt8b68"]
+
+[ext_resource type="Texture2D" uid="uid://yj0lli83vxyn" path="res://icon.svg" id="1_ejbth"]
+[ext_resource type="Script" path="res://scenes/player/player.gd" id="1_hudng"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wsd0a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ejbth")
+}],
+"loop": true,
+"name": &"ride",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p2xo8"]
+size = Vector2(130, 128)
 
 [node name="Player" type="CharacterBody2D"]
+position = Vector2(163, 193)
+script = ExtResource("1_hudng")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_wsd0a")
+animation = &"ride"
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+gravity_scale = 10.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_p2xo8")
