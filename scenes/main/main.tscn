@@ -3,14 +3,23 @@
 [ext_resource type="PackedScene" uid="uid://yme3lhdt8b68" path="res://scenes/player/player.tscn" id="1_2bm1y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vtyni"]
-size = Vector2(378, 20)
+size = Vector2(792, 40)
 
 [node name="Main" type="Node"]
 
 [node name="Player" parent="." instance=ExtResource("1_2bm1y")]
+scale = Vector2(0.5, 0.5)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(199, 428)
+position = Vector2(388, 460)
 shape = SubResource("RectangleShape2D_vtyni")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
+offset_left = -8.0
+offset_top = 440.0
+offset_right = 32.0
+offset_bottom = 478.0
+scale = Vector2(19.7517, 1.05882)
+color = Color(1, 0.372549, 1, 1)
