@@ -1,7 +1,7 @@
 extends RigidBody2D
 signal hit
 
-var move_speed = 350
+@export var move_speed = 350
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

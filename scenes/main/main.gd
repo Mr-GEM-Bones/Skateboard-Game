@@ -8,7 +8,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	print("test")
+	pass
 
 
 func _on_bird_obstacle_hit():
