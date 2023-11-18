@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://7c3d1m7jfy87"]
+
+[ext_resource type="Texture2D" uid="uid://dpl54ys2eytkg" path="res://Assets/Bird.png" id="1_c2fqy"]
+[ext_resource type="Script" path="res://scenes/Obstacles/obstacle.gd" id="1_xi7wj"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j746c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_c2fqy")
+}],
+"loop": true,
+"name": &"fly",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7l40a"]
+size = Vector2(40, 26)
+
+[node name="bird_obstacle" type="RigidBody2D"]
+position = Vector2(744, 282)
+gravity_scale = 0.0
+script = ExtResource("1_xi7wj")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_j746c")
+animation = &"fly"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_7l40a")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
