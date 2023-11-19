@@ -29,6 +29,6 @@ scale = Vector2(19.7517, 1.05882)
 color = Color(1, 0.372549, 1, 1)
 
 [node name="bird_obstacle" parent="." instance=ExtResource("2_u2pbf")]
-position = Vector2(746, 394)
+position = Vector2(710, 381)
 
 [connection signal="hit" from="bird_obstacle" to="." method="_on_bird_obstacle_hit"]

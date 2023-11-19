@@ -12,4 +12,6 @@ func _process(delta):
 
 
 func _on_bird_obstacle_hit():
-	print("Hit!")
+	print("HitMain!")
+	
+
