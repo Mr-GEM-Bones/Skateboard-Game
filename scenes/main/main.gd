@@ -6,19 +6,34 @@ extends Node
 var speed = 240 # the basic speed that everything moves at. Change this for everything to move.
 var spawnX = 782
 var player_pos = Vector2(100,405)
+var player_health = 3 #player health. 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$Player.position = player_pos
+	start_game()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
 
+func start_game():
+	#this function starts the game.
+	
+	#Player position
+	$Player.position = player_pos
+	
+	#Set up the health.
+	$HUD.update_health(player_health)
 
-func _on_bird_obstacle_hit():
-	print("HitMain!")
+func player_hit():
+	player_health -= 1
+	$HUD.update_health(player_health)
+	if player_health <= 0:
+		game_over()
+
+func game_over():
+	print("Game Over!")
 	
 
 
@@ -30,6 +45,9 @@ func _on_bird_timer_timeout():
 	bird.position = Vector2(spawnX,spawnY)
 	#print(bird)
 	
+	#suscribe to the hit signal.
+	bird.hit.connect(player_hit)
+	
 	add_child(bird)
 
 
@@ -39,6 +57,9 @@ func _on_ground_timer_timeout():
 	var spawnY = 415 #this is about as high, close to the floor.
 	
 	ground.position = Vector2(spawnX, spawnY)
+	
+		#suscribe to the hit signal.
+	ground.hit.connect(player_hit)
 	
 	add_child(ground)
 	pass # Replace with function body.

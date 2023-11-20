@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkdc40yj7kn7x"]
+
+[ext_resource type="Texture2D" uid="uid://4psmuf44ml1o" path="res://Assets/heart pixel art 254x254.png" id="1_i3tua"]
+[ext_resource type="Script" path="res://scenes/main/hud.gd" id="1_jpaia"]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_jpaia")
+
+[node name="Health" type="Node2D" parent="."]
+
+[node name="health1" type="Sprite2D" parent="Health"]
+position = Vector2(70, 60)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("1_i3tua")
+
+[node name="health2" type="Sprite2D" parent="Health"]
+position = Vector2(110, 60)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("1_i3tua")
+
+[node name="health3" type="Sprite2D" parent="Health"]
+position = Vector2(150, 60)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("1_i3tua")
