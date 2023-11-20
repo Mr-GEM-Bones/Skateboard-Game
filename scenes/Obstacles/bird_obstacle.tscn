@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://7c3d1m7jfy87"]
 
-[ext_resource type="Script" path="res://scenes/obstacles/obstacle.gd" id="1_xi7wj"]
-[ext_resource type="Texture2D" uid="uid://d35b2uw67lmcr" path="res://assets/birdtestskber-Sheet.png" id="2_iwky2"]
+[ext_resource type="Script" path="res://scenes/Obstacles/bird_obstacle.gd" id="1_kkraw"]
+[ext_resource type="Texture2D" uid="uid://d35b2uw67lmcr" path="res://Assets/birdtestskber-Sheet.png" id="2_iwky2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_18h3y"]
 atlas = ExtResource("2_iwky2")
@@ -43,10 +43,11 @@ animations = [{
 size = Vector2(30, 20)
 
 [node name="bird_obstacle" type="RigidBody2D"]
+collision_layer = 4
 gravity_scale = 0.0
 max_contacts_reported = 1
 contact_monitor = true
-script = ExtResource("1_xi7wj")
+script = ExtResource("1_kkraw")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
