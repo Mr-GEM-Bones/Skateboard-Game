@@ -1,13 +1,13 @@
 [gd_scene load_steps=5 format=3 uid="uid://yme3lhdt8b68"]
 
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_hudng"]
-[ext_resource type="Texture2D" uid="uid://y4ncxbo60n8p" path="res://Assets/Skateboarder_test.png" id="2_ccxik"]
+[ext_resource type="Texture2D" uid="uid://y4ncxbo60n8p" path="res://assets/Skateboarder_test.png" id="2_rk5dd"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wsd0a"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_ccxik")
+"texture": ExtResource("2_rk5dd")
 }],
 "loop": true,
 "name": &"ride",

@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://7c3d1m7jfy87"]
 
-[ext_resource type="Script" path="res://scenes/Obstacles/obstacle.gd" id="1_xi7wj"]
-[ext_resource type="Texture2D" uid="uid://d35b2uw67lmcr" path="res://Assets/birdtestskber-Sheet.png" id="2_iwky2"]
+[ext_resource type="Script" path="res://scenes/obstacles/obstacle.gd" id="1_xi7wj"]
+[ext_resource type="Texture2D" uid="uid://d35b2uw67lmcr" path="res://assets/birdtestskber-Sheet.png" id="2_iwky2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_18h3y"]
 atlas = ExtResource("2_iwky2")
