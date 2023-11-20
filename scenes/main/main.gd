@@ -2,6 +2,7 @@ extends Node
 
 @export var bird_obstacle_scene: PackedScene
 
+var speed = 240 # the basic speed that everything moves at. Change this for everything to move.
 var spawnX = 782
 var player_pos = Vector2(100,405)
 
