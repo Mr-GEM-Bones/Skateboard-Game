@@ -1,3 +1,30 @@
-[gd_scene format=3 uid="uid://yme3lhdt8b68"]
+[gd_scene load_steps=5 format=3 uid="uid://yme3lhdt8b68"]
+
+[ext_resource type="Script" path="res://scenes/player/player.gd" id="1_hudng"]
+[ext_resource type="Texture2D" uid="uid://y4ncxbo60n8p" path="res://Assets/Skateboarder_test.png" id="2_ccxik"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wsd0a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ccxik")
+}],
+"loop": true,
+"name": &"ride",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p2xo8"]
+size = Vector2(80, 142)
 
 [node name="Player" type="CharacterBody2D"]
+position = Vector2(163, 193)
+script = ExtResource("1_hudng")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_wsd0a")
+animation = &"ride"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_p2xo8")

@@ -1,0 +1,65 @@
+[gd_scene load_steps=9 format=3 uid="uid://7c3d1m7jfy87"]
+
+[ext_resource type="Script" path="res://scenes/Obstacles/obstacle.gd" id="1_xi7wj"]
+[ext_resource type="Texture2D" uid="uid://d35b2uw67lmcr" path="res://Assets/birdtestskber-Sheet.png" id="2_iwky2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_18h3y"]
+atlas = ExtResource("2_iwky2")
+region = Rect2(0, 0, 75, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g6bet"]
+atlas = ExtResource("2_iwky2")
+region = Rect2(75, 0, 75, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dc5hi"]
+atlas = ExtResource("2_iwky2")
+region = Rect2(150, 0, 75, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ap7q"]
+atlas = ExtResource("2_iwky2")
+region = Rect2(225, 0, 75, 44)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j746c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_18h3y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g6bet")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dc5hi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ap7q")
+}],
+"loop": true,
+"name": &"fly",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7l40a"]
+size = Vector2(30, 20)
+
+[node name="bird_obstacle" type="RigidBody2D"]
+gravity_scale = 0.0
+max_contacts_reported = 1
+contact_monitor = true
+script = ExtResource("1_xi7wj")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_j746c")
+animation = &"fly"
+frame_progress = 0.231622
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_7l40a")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_shape_entered" from="." to="." method="_on_body_shape_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
