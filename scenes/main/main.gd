@@ -25,6 +25,6 @@ func _on_bird_timer_timeout():
 	var spawnY = 333
 	
 	bird.position = Vector2(spawnX,spawnY)
-	print(bird)
+	#print(bird)
 	
 	add_child(bird)

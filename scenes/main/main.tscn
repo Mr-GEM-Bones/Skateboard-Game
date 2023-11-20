@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://qnic3mo71bii"]
+[gd_scene load_steps=7 format=3 uid="uid://qnic3mo71bii"]
 
 [ext_resource type="Script" path="res://scenes/main/main.gd" id="1_1ptqv"]
 [ext_resource type="PackedScene" uid="uid://yme3lhdt8b68" path="res://scenes/player/player.tscn" id="1_2bm1y"]
 [ext_resource type="PackedScene" uid="uid://7c3d1m7jfy87" path="res://scenes/Obstacles/bird_obstacle.tscn" id="2_u2pbf"]
+[ext_resource type="Texture2D" uid="uid://qa50s1chrdf0" path="res://Assets/testtile.png" id="3_vj5op"]
+[ext_resource type="Script" path="res://scenes/main/Floor.gd" id="4_ljyih"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vtyni"]
 size = Vector2(792, 40)
@@ -18,6 +20,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="Floor" type="Sprite2D" parent="."]
+texture_repeat = 2
+position = Vector2(582, 440)
+texture = ExtResource("3_vj5op")
+region_enabled = true
+region_rect = Rect2(0, 0, 1200, 100)
+script = ExtResource("4_ljyih")
+
 [node name="Player" parent="." instance=ExtResource("1_2bm1y")]
 position = Vector2(107, 405)
 scale = Vector2(0.5, 0.5)
@@ -29,6 +39,7 @@ position = Vector2(388, 460)
 shape = SubResource("RectangleShape2D_vtyni")
 
 [node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
+visible = false
 offset_left = -8.0
 offset_top = 440.0
 offset_right = 32.0
