@@ -7,6 +7,7 @@ var speed = 240 # the basic speed that everything moves at. Change this for ever
 var spawnX = 782
 var player_pos = Vector2(100,405)
 var player_health = 3 #player health. 
+var player_score = 0 #player score.
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -15,10 +16,12 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	player_score += 1
+	$HUD.update_score(player_score)
 
 func start_game():
 	#this function starts the game.
+	$HUD.update_score(player_score)
 	
 	#Player position
 	$Player.position = player_pos

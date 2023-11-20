@@ -21,3 +21,7 @@ func update_health(health):
 	if health>=0:
 		for i in health:
 			_health[i].show()
+
+
+func update_score(score):
+	$Score.text = str(score)
