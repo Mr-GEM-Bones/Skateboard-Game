@@ -9,5 +9,5 @@ func _ready():
 
 
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	move_obstacle_at_speed(move_speed)
