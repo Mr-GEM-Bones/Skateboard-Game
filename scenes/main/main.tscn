@@ -61,5 +61,9 @@ autostart = true
 
 [node name="HUD" parent="." instance=ExtResource("7_orfxv")]
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(260, 320)
+zoom = Vector2(1.5, 1.5)
+
 [connection signal="timeout" from="BirdTimer" to="." method="_on_bird_timer_timeout"]
 [connection signal="timeout" from="GroundTimer" to="." method="_on_ground_timer_timeout"]

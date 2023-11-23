@@ -1,10 +1,65 @@
-[gd_scene load_steps=5 format=3 uid="uid://yme3lhdt8b68"]
+[gd_scene load_steps=13 format=3 uid="uid://yme3lhdt8b68"]
 
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_hudng"]
+[ext_resource type="Texture2D" uid="uid://bfxsbv8nr4i15" path="res://Assets/skatersprite-Sheet.png" id="2_55eh0"]
 [ext_resource type="Texture2D" uid="uid://y4ncxbo60n8p" path="res://Assets/Skateboarder_test.png" id="2_ccxik"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pe6gd"]
+atlas = ExtResource("2_55eh0")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ddx4"]
+atlas = ExtResource("2_55eh0")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o1dbu"]
+atlas = ExtResource("2_55eh0")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_olqup"]
+atlas = ExtResource("2_55eh0")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bc0ub"]
+atlas = ExtResource("2_55eh0")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3l171"]
+atlas = ExtResource("2_55eh0")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_38jwx"]
+atlas = ExtResource("2_55eh0")
+region = Rect2(768, 0, 128, 128)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wsd0a"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pe6gd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ddx4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o1dbu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_olqup")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bc0ub")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3l171")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_38jwx")
+}],
+"loop": true,
+"name": &"boost",
+"speed": 7.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_ccxik")
@@ -25,7 +80,9 @@ metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_wsd0a")
-animation = &"ride"
+animation = &"boost"
+frame = 3
+frame_progress = 0.713251
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_p2xo8")
