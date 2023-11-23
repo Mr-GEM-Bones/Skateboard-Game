@@ -1,4 +1,5 @@
 extends CanvasLayer
+signal start_game
 
 var _health # Has all the hearts and love
 
@@ -23,5 +24,15 @@ func update_health(health):
 			_health[i].show()
 
 
+
 func update_score(score):
 	$Score.text = str(score)
+
+
+
+
+func _on_start_button_pressed():
+	print("button pressed")
+	$StartButton.hide()
+	$ExitButton.hide()
+	start_game.emit()
