@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://yme3lhdt8b68"]
+
+[ext_resource type="Script" path="res://scenes/player/persistent_state.gd" id="1_rv07g"]
+[ext_resource type="Texture2D" uid="uid://y4ncxbo60n8p" path="res://assets/Skateboarder_test.png" id="2_rk5dd"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wsd0a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_rk5dd")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p2xo8"]
+size = Vector2(80, 142)
+
+[node name="Player" type="CharacterBody2D"]
+position = Vector2(163, 193)
+collision_mask = 3
+script = ExtResource("1_rv07g")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_wsd0a")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_p2xo8")

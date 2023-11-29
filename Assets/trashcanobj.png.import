@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://chr0h3364tigh"
-path="res://.godot/imported/trashcanobj.png-ce20fb0523050f88ddf64645fb1378c9.ctex"
+path="res://.godot/imported/trashcanobj.png-74bcde4905f2ca71ddff0167574cc94b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/trashcanobj.png"
-dest_files=["res://.godot/imported/trashcanobj.png-ce20fb0523050f88ddf64645fb1378c9.ctex"]
+source_file="res://assets/trashcanobj.png"
+dest_files=["res://.godot/imported/trashcanobj.png-74bcde4905f2ca71ddff0167574cc94b.ctex"]
 
 [params]
 
