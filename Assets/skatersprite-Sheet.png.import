@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bfxsbv8nr4i15"
-path="res://.godot/imported/skatersprite-Sheet.png-ce07fa4dbe0a94986090347680951b68.ctex"
+path="res://.godot/imported/skatersprite-Sheet.png-504c477bebda1e01baf0a15260a4b8a7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/skatersprite-Sheet.png"
-dest_files=["res://.godot/imported/skatersprite-Sheet.png-ce07fa4dbe0a94986090347680951b68.ctex"]
+source_file="res://assets/skatersprite-Sheet.png"
+dest_files=["res://.godot/imported/skatersprite-Sheet.png-504c477bebda1e01baf0a15260a4b8a7.ctex"]
 
 [params]
 

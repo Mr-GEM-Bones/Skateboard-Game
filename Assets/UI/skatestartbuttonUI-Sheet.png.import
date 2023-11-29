@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c77mtpxec61my"
-path="res://.godot/imported/skatestartbuttonUI-Sheet.png-c4f951d5f902e7d40bdf77924f8c924b.ctex"
+path="res://.godot/imported/skatestartbuttonUI-Sheet.png-fb22e8c00adf0374b1df6b449d55601d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/UI/skatestartbuttonUI-Sheet.png"
-dest_files=["res://.godot/imported/skatestartbuttonUI-Sheet.png-c4f951d5f902e7d40bdf77924f8c924b.ctex"]
+source_file="res://assets/UI/skatestartbuttonUI-Sheet.png"
+dest_files=["res://.godot/imported/skatestartbuttonUI-Sheet.png-fb22e8c00adf0374b1df6b449d55601d.ctex"]
 
 [params]
 
