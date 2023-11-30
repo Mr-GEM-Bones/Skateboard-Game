@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d35b2uw67lmcr"
-path="res://.godot/imported/birdtestskber-Sheet.png-c456113bc9f81b8ab1fbfc9f1a75fa4e.ctex"
+path="res://.godot/imported/birdtestskber-Sheet.png-4e60360a383f704977806deef98420d4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/birdtestskber-Sheet.png"
-dest_files=["res://.godot/imported/birdtestskber-Sheet.png-c456113bc9f81b8ab1fbfc9f1a75fa4e.ctex"]
+source_file="res://Assets/birdtestskber-Sheet.png"
+dest_files=["res://.godot/imported/birdtestskber-Sheet.png-4e60360a383f704977806deef98420d4.ctex"]
 
 [params]
 

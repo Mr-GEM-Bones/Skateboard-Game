@@ -1,8 +1,8 @@
 [gd_scene load_steps=13 format=3 uid="uid://yme3lhdt8b68"]
 
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_hudng"]
-[ext_resource type="Texture2D" uid="uid://bfxsbv8nr4i15" path="res://assets/skatersprite-Sheet.png" id="2_55eh0"]
-[ext_resource type="Texture2D" uid="uid://y4ncxbo60n8p" path="res://assets/Skateboarder_test.png" id="2_ccxik"]
+[ext_resource type="Texture2D" uid="uid://bfxsbv8nr4i15" path="res://Assets/skatersprite-Sheet.png" id="2_55eh0"]
+[ext_resource type="Texture2D" uid="uid://y4ncxbo60n8p" path="res://Assets/Skateboarder_test.png" id="2_ccxik"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pe6gd"]
 atlas = ExtResource("2_55eh0")

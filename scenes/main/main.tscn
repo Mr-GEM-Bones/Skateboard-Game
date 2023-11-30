@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" path="res://scenes/main/main.gd" id="1_1ptqv"]
 [ext_resource type="PackedScene" uid="uid://yme3lhdt8b68" path="res://scenes/player/player.tscn" id="1_2bm1y"]
-[ext_resource type="PackedScene" uid="uid://7c3d1m7jfy87" path="res://scenes/obstacles/bird_obstacle.tscn" id="2_u2pbf"]
-[ext_resource type="Texture2D" uid="uid://dxmxx58aa7f4q" path="res://assets/testtile-export.png" id="4_20laq"]
+[ext_resource type="PackedScene" uid="uid://7c3d1m7jfy87" path="res://scenes/Obstacles/bird_obstacle.tscn" id="2_u2pbf"]
+[ext_resource type="Texture2D" uid="uid://dxmxx58aa7f4q" path="res://Assets/testtile-export.png" id="4_20laq"]
 [ext_resource type="Script" path="res://scenes/main/Floor.gd" id="4_ljyih"]
-[ext_resource type="PackedScene" uid="uid://diyhmc43xb5q5" path="res://scenes/obstacles/trash_obstacle.tscn" id="6_1e6ai"]
+[ext_resource type="PackedScene" uid="uid://diyhmc43xb5q5" path="res://scenes/Obstacles/trash_obstacle.tscn" id="6_1e6ai"]
 [ext_resource type="PackedScene" uid="uid://dkdc40yj7kn7x" path="res://scenes/main/hud.tscn" id="7_orfxv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vtyni"]
