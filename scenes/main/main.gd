@@ -11,6 +11,7 @@ var player_pos = Vector2(100,405)
 var player_health = 3 #player health. 
 var player_score = 0 #player score.
 var is_active = false #is the game in play.
+var is_invulnerable = false #Whenever the player is hit, they are invulnerable.
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -50,11 +51,20 @@ func start_game():
 	is_active = true
 
 func player_hit():
+	if is_invulnerable: 
+		return
+	
 	player_health -= 1
 	$HUD.update_health(player_health)
 	if player_health <= 0:
 		game_over()
-
+	else: 
+		$Player.change_state("hit")
+		is_invulnerable = true
+		await get_tree().create_timer(0.5).timeout
+		$Player.change_state("idle")
+		is_invulnerable = false
+	
 func game_over():
 	print("Game Over!")
 	
