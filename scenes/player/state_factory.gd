@@ -6,7 +6,8 @@ func _init():
 	states = {
 		"idle": IdleState,
 		"hit": HitState,
-		"death": DeathState
+		"death": DeathState,
+		"jump": JumpState
 }
 
 func get_state(state_name):
