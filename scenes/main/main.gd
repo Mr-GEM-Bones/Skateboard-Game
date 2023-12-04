@@ -60,8 +60,10 @@ func player_hit():
 		game_over()
 	else: 
 		$Player.change_state("hit")
+		$Player.is_jumping = false
+		print("hit")
 		is_invulnerable = true
-		await get_tree().create_timer(0.5).timeout
+		await get_tree().create_timer(1.0).timeout
 		$Player.change_state("idle")
 		is_invulnerable = false
 	
