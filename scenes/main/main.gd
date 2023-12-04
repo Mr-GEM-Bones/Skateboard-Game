@@ -37,6 +37,7 @@ func start_game():
 	
 	#Player position
 	$Player.position = player_pos
+	$Player.change_state("ride")
 	
 	#Set up the health.
 	$HUD.update_health(player_health)
@@ -58,13 +59,14 @@ func player_hit():
 	$HUD.update_health(player_health)
 	if player_health <= 0:
 		game_over()
+		$Player.change_state("idle")
 	else: 
 		$Player.change_state("hit")
 		$Player.is_jumping = false
 		print("hit")
 		is_invulnerable = true
 		await get_tree().create_timer(1.0).timeout
-		$Player.change_state("idle")
+		$Player.change_state("ride")
 		is_invulnerable = false
 	
 func game_over():

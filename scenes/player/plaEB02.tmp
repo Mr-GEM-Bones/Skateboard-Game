@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://yme3lhdt8b68"]
+[gd_scene load_steps=31 format=3 uid="uid://yme3lhdt8b68"]
 
 [ext_resource type="Script" path="res://scenes/player/persistent_state.gd" id="1_sw81y"]
 [ext_resource type="Texture2D" uid="uid://bfxsbv8nr4i15" path="res://Assets/skatersprite-Sheet.png" id="2_55eh0"]
@@ -101,34 +101,6 @@ region = Rect2(256, 0, 128, 128)
 atlas = ExtResource("4_0wclp")
 region = Rect2(384, 0, 128, 128)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hxi0q"]
-atlas = ExtResource("2_55eh0")
-region = Rect2(0, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yrscj"]
-atlas = ExtResource("2_55eh0")
-region = Rect2(128, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_w7dmx"]
-atlas = ExtResource("2_55eh0")
-region = Rect2(256, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_odw1h"]
-atlas = ExtResource("2_55eh0")
-region = Rect2(384, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1bfbq"]
-atlas = ExtResource("2_55eh0")
-region = Rect2(512, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wk34j"]
-atlas = ExtResource("2_55eh0")
-region = Rect2(640, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ilgsm"]
-atlas = ExtResource("2_55eh0")
-region = Rect2(768, 0, 128, 128)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_wsd0a"]
 animations = [{
 "frames": [{
@@ -228,28 +200,7 @@ animations = [{
 "name": &"jump",
 "speed": 6.0
 }, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hxi0q")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_yrscj")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_w7dmx")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_odw1h")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1bfbq")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_wk34j")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ilgsm")
-}],
+"frames": [],
 "loop": true,
 "name": &"ride",
 "speed": 5.0

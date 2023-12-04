@@ -47,8 +47,9 @@ func _physics_process(delta):
 	#This is here to stop the jumping animation when the player lands.
 	if is_jumping:
 		if is_on_floor():
+			print(is_jumping)
 			is_jumping = false
-			change_state("idle")
+			change_state("ride")
 		
 	# Handle Jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():

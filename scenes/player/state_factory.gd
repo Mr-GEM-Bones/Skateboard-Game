@@ -4,10 +4,11 @@ var states
 
 func _init():
 	states = {
-		"idle": IdleState,
 		"hit": HitState,
+		"idle": IdleState,
 		"death": DeathState,
-		"jump": JumpState
+		"jump": JumpState,
+		"ride": RideState
 }
 
 func get_state(state_name):
